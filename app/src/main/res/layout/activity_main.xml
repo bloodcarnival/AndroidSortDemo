@@ -19,31 +19,43 @@
 
     <EditText
         android:id="@+id/inputString"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="12dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/sortedString"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/sortedString"
-        android:layout_width="409dp"
-        android:layout_height="450dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="160dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="175dp"
+        android:layout_width="0dp"
+        android:layout_height="216dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="160dp"
         android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="12dp"
+        android:text="@string/input_numbers_to_sort"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/inputString"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
