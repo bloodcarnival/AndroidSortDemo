@@ -9,6 +9,8 @@ import android.view.View;
 
 import android.os.Bundle;
 
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
     private Button sortButton;
     private EditText inputString;
@@ -30,9 +32,41 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    public static int[] selectionSort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            int index = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[index]) {
+                    index = j;
+                }
+            }
+            int smallerNumber = arr[index];
+            arr[index] = arr[i];
+            arr[i] = smallerNumber;
+        }
+        return arr;
+    }
     //TODO: Implement sort fucnction
     private void sort(String inputString) {
-        sortedString.setText(inputString);
-        
+        int index = 0;
+        String[] numberstr = inputString.split(",");
+        int[] numbers = new int[numberstr.length];
+        for(int i = 0; i < numberstr.length; i++){
+            try{
+                numbers[index] = Integer.parseInt(numberstr[i].trim());
+                index++;
+            }
+            catch (NumberFormatException nfe)
+            {
+                System.out.println(nfe);
+            }
+        }
+        int[] numbersarr = selectionSort(numbers);
+        String[] arr = new String[numbersarr.length];
+        for(int i=0; i< numbersarr.length; i++){
+            arr[i] = String.valueOf(numbersarr[i]);
+        }
+        String stuff = Arrays.toString(arr);
+        sortedString.setText(stuff);
     }
 }
