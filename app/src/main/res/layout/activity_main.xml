@@ -31,12 +31,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/sortedString"
         android:layout_width="0dp"
-        android:layout_height="450dp"
+        android:layout_height="0dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="175dp"
         android:layout_marginEnd="50dp"
@@ -44,7 +45,18 @@
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/warningMsg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/sortedString"
+        app:layout_constraintEnd_toEndOf="@id/sortedString"
+        app:layout_constraintStart_toStartOf="@id/sortedString"
+        app:layout_constraintTop_toTopOf="@id/sortedString" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
