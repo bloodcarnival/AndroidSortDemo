@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText inputString;
     private TextView sortedString;
     private TextView warningMsg;
+    private TextView duration;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         sortButton = (Button) findViewById(R.id.sortButton);
         sortedString = (TextView) findViewById(R.id.sortedString);
         warningMsg = (TextView) findViewById(R.id.warningMsg);
-        
+        duration = (TextView) findViewById(R.id.duration);
 
         // Add button logic
         sortButton.setOnClickListener(new View.OnClickListener() {
@@ -54,8 +55,9 @@ public class MainActivity extends AppCompatActivity {
 
         return arr;
     }
-    //TODO: Implement sort fucnction
+    //TODO: Implement sort function
     private void sort(String inputString) {
+        long startTime = System.currentTimeMillis();
         int index = 0;
         String[] numberstr = inputString.split(",");
         int[] numbers = new int[numberstr.length];
@@ -89,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
 
         String stuff = Arrays.toString(arr);
         sortedString.setText(stuff);
+        long endTime = System.currentTimeMillis();
+        duration.setText(endTime + " milliseconds");
     }
 }
 
