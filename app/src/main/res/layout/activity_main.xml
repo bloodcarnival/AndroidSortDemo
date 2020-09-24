@@ -59,4 +59,12 @@
         app:layout_constraintStart_toStartOf="@id/sortedString"
         app:layout_constraintTop_toTopOf="@id/sortedString" />
 
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="240dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
