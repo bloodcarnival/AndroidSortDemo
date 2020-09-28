@@ -10,20 +10,23 @@
         android:id="@+id/sortButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/sort"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sortedString" />
 
     <EditText
         android:id="@+id/inputString"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="80dp"
+        android:autofillHints=""
         android:ems="10"
         android:gravity="start|top"
         android:inputType="text"
@@ -31,15 +34,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/sortedString"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="175dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="175dp"
         android:text=""
@@ -57,14 +59,15 @@
         app:layout_constraintBottom_toBottomOf="@id/sortedString"
         app:layout_constraintEnd_toEndOf="@id/sortedString"
         app:layout_constraintStart_toStartOf="@id/sortedString"
-        app:layout_constraintTop_toTopOf="@id/sortedString" />
+        app:layout_constraintTop_toTopOf="@+id/sortButton" />
 
     <TextView
         android:id="@+id/duration"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
         android:visibility="visible"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="240dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sortedString" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
