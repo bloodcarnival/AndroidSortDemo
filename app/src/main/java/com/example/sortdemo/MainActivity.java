@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         int[] numbers = new int[numberstr.length];
         boolean warning = false;
         
-        if(numberstr.length < 3 || numberstr.length > 9){
+        if(numberstr.length < 3 || numberstr.length > 8){
             warningMsg.setText("Invalid numbers. Try again!!");
             warning = true;
             return;
