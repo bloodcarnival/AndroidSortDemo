@@ -108,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
     }
     //TODO: Implement sort function
     private void sort(String inputString) {
+        sortedString.setText("");
+        duration.setText("");
+
         long startTime = System.currentTimeMillis();
         int index = 0;
         String[] numberstr = inputString.split(",");
