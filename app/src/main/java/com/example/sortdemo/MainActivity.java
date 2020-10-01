@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if(swapped == true) {
                     sortedString.append(Html.fromHtml(Arrays.toString(newArray)));
-                    for (int l = 0; l < newArray.length - 1; l++) {
+                    for (int l = 0; l < newArray.length; l++) {
                         String current = "";
                         if (newArray[l] != null) {
                             current = newArray[l];
